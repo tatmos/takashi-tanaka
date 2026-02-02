@@ -1,0 +1,31 @@
+{
+  "note": "public_html の構成から変換。質疑の返答で参照する。",
+  "homepage": "http://park18.wakwak.com/~cha/index.html",
+  "gameUrl": "http://park18.wakwak.com/~cha/game.html",
+  "eventUrl": "http://park18.wakwak.com/~cha/event.html",
+  "programUrl": "http://park18.wakwak.com/~cha/program.html",
+  "worksUrl": "http://park18.wakwak.com/~cha/works.html",
+  "games": {
+    "description": "開発に関わった主なゲーム",
+    "examples": "Crowbar Climber, Guerrilla Gorilla, Little Thief, Bad Bunny Bonanza, Devil's Roulette, Mad Surgeon, チェインドエスケイプ, Ghost Photographers, スティックキャッチャー, ブレイゼンブレイズ, Dyschronia : CA など"
+  },
+  "works": {
+    "description": "Dance, Music, Visualize の Live works"
+  },
+  "event": {
+    "description": "年に数回イベントを開催。サウンドミニハッカソン、サウンドゲームジャム、サウンド助け合い所など。"
+  },
+  "program": {
+    "description": "unityroom, itch.io, Ludum Dare, bitbucket, github, gist, GlobalGameJam などでプログラムやゲームを公開。"
+  },
+  "categories": {
+    "GAME": "ゲーム関連。開発に関わったゲーム一覧はサイトの GAME ページへ。",
+    "EVENT": "イベント。サウンドミニハッカソン・サウンドゲームジャムなど。",
+    "TEXT": "テキスト・記事",
+    "CEDEC": "CEDEC・SIG-AUDIO・勉強会",
+    "LIVE": "ライブ",
+    "GRAPHIC": "グラフィック",
+    "PROGRAM": "プログラム・ゲーム制作。unityroom, itch.io, github など。",
+    "sound": "サウンド（CD・DVD・AppleMusic・Spotify）"
+  }
+}

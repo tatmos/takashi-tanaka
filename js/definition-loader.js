@@ -8,10 +8,12 @@
     "profile",
     "params",
     "public",
+    "site-content",
     "tone",
     "privacy",
     "rules",
     "recent",
+    "faq",
   ];
   const DEFINITION_BASE = "definition/";
 

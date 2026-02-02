@@ -172,6 +172,34 @@ a:hover {
   opacity: 0.9;
 }
 
+.faq-label {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.faq-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.faq-btn {
+  padding: 0.35rem 0.65rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.faq-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .chat-history {
   max-height: 20rem;
   overflow-y: auto;
@@ -197,6 +225,11 @@ a:hover {
 
 .chat-body {
   padding: 0.35rem 0;
+}
+
+.chat-body a {
+  color: var(--accent);
+  word-break: break-all;
 }
 
 .visually-hidden {

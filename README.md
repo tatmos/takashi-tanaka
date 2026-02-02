@@ -1,74 +1,33 @@
-# Takashi Tanaka -- README.md
+# AIたなかたかし
 
-*Exploratory R&D Engineer / Reality Hacker*
+自己紹介・最近のこと・対話ができる 1 ページサイト。田中孝（ちゃり）の定義をもとに、いろいろ質問に答える。
 
-## Overview
+## このリポジトリでやっていること
 
-This repository describes the internal architecture of a human system
-called **Takashi Tanaka**.
+- **公開サイト**: ルートの `index.html` を GitHub Pages で公開（Folder: / (root)）。自己紹介・最近のこと（X タイムライン）・「なんでも聞いて」対話の 3 ブロック。
+- **対話**: ルールベース。定義データ（`definition/`）と `definition/rules.json` に基づいて返答する。日本語のみ。
+- **定義**: `definition/` 配下の JSON（basic, profile, params, public, recent, tone, privacy, rules）を手動で編集。個人情報は公開してよい範囲のみ。詳しくは [企画書.md](企画書.md) を参照。
 
-This system: - Treats the world as a sandbox, not a theory. - Verifies
-ideas through implementation. - Gets maximum reward when reality behaves
-as predicted. - Lives as infinite prototypes, not a single product.
+## 構成（抜粋）
 
-## Core Architecture
+```
+/
+├── index.html          # エントリ
+├── style.css
+├── definition/         # 定義（カテゴリ別 JSON）
+├── js/                 # definition-loader, rules-engine, chat-ui, app
+├── README.md
+├── 企画書.md
+└── experiments/        # 実験用（運用ルールは .cursor/rules/repo.mdc）
+```
 
-**Type:** Exploratory R&D Engineer
+## 運用
 
-    Idea → Implementation → Reality moves → Dopamine → Next experiment
+- 実験は `experiments/` 以下。命名は `experiments/YYYYMM-短い名前`。
+- 定義の更新は `definition/*.json` を直接編集。
+- 詳細な仕様・画面構成・今後の拡張案は [企画書.md](企画書.md) に記載。
 
-## Reward Function
+## リンク
 
-Primary reward: - When a mental structure works in the real world.
-
-Secondary (low priority): - Evaluation - Money - Brand - Reputation
-
-## Stop Condition
-
-Projects stop mainly when: \> Technically too difficult with current
-resources.
-
-Not boredom. Not lack of demand.
-
-## Self-Model vs Actual Model
-
-Self-image: - Researcher / Thinker
-
-Actual: - Implementation-driven R&D Engineer - Thinks *by modifying
-reality*
-
-## Optimal Social Position
-
-Best environment: - R&D lab - Prototyping role - "Try this experiment"
-position
-
-Worst: - Startup CEO - Influencer - Brand-driven creator
-
-## Life Strategy
-
-Goal: \> Continue free experimentation indefinitely.
-
-Redefinitions: - Money = experiment power supply - Job = experiment
-license - Output = portal to next sandbox
-
-## Exploration Loop
-
-    Idea → Build → Hit limit → Drop → New idea
-
-This is not a flaw. It is an optimization algorithm.
-
-## Unknown Parameters (TODO)
-
-1.  Real limit threshold
-2.  Role of others
-3.  Emotional friction
-
-## Usage Notes
-
-Do: - Protect experimental time - Build weird things - Observe reality
-
-Don't: - Force focus - Chase fame - Optimize branding
-
-## One-liner
-
-> I do not seek success. I seek new behaviors in reality.
+- [park18](http://park18.wakwak.com/~cha/index.html)
+- [X @tatmos](https://x.com/tatmos)

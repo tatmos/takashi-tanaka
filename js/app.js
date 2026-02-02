@@ -3,6 +3,12 @@
  */
 (function () {
   let definition = null;
+  let qaPairNumber = 0;
+
+  function getNextPairNumber() {
+    qaPairNumber += 1;
+    return qaPairNumber;
+  }
 
   function renderSelfIntro(merged) {
     const container = document.getElementById("self-intro");
@@ -36,6 +42,72 @@
     el.innerHTML = linked;
   }
 
+  function shuffleArray(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = a[i];
+      a[i] = a[j];
+      a[j] = t;
+    }
+    return a;
+  }
+
+  function createFaqButton(item, container, faqPool, faqDisplayed, fullItems, showCount) {
+    const q = item.q != null ? String(item.q).trim() : "";
+    if (!q) return null;
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "faq-btn";
+    btn.textContent = q;
+    btn.addEventListener("click", function () {
+      const history = typeof ChatUI !== "undefined" && ChatUI.getHistoryEl ? ChatUI.getHistoryEl() : null;
+      const num = getNextPairNumber();
+      if (history) ChatUI.appendMessage(history, "user", q, num);
+      let answer;
+      if (item.a != null && String(item.a).trim() !== "") {
+        answer = typeof RulesEngine !== "undefined" && RulesEngine.fillTemplate
+          ? RulesEngine.fillTemplate(String(item.a), definition)
+          : String(item.a);
+      } else {
+        answer = getReply(q);
+      }
+      if (history) ChatUI.appendMessage(history, "bot", answer, num);
+
+      btn.remove();
+      const idx = faqDisplayed.indexOf(item);
+      if (idx !== -1) faqDisplayed.splice(idx, 1);
+      let newItem = faqPool.length > 0 ? faqPool.pop() : null;
+      if (!newItem && fullItems.length > 0) {
+        const notShown = fullItems.filter(function (i) { return faqDisplayed.indexOf(i) === -1; });
+        const refill = shuffleArray(notShown.length > 0 ? notShown.slice() : fullItems.slice());
+        refill.forEach(function (i) { faqPool.push(i); });
+        newItem = faqPool.length > 0 ? faqPool.pop() : fullItems[0];
+      }
+      if (newItem) {
+        faqDisplayed.push(newItem);
+        const newBtn = createFaqButton(newItem, container, faqPool, faqDisplayed, fullItems, showCount);
+        if (newBtn) container.appendChild(newBtn);
+      }
+    });
+    return btn;
+  }
+
+  function renderFaqButtons(merged) {
+    const container = document.getElementById("faq-buttons");
+    if (!container || !merged.faq || !merged.faq.items || !merged.faq.items.length) return;
+    const fullItems = merged.faq.items.slice();
+    const showCount = Math.max(0, parseInt(merged.faq.showCount, 10) || 4);
+    const shuffled = shuffleArray(fullItems);
+    const faqDisplayed = shuffled.slice(0, showCount);
+    const faqPool = shuffled.slice(showCount);
+    container.innerHTML = "";
+    faqDisplayed.forEach(function (item) {
+      const btn = createFaqButton(item, container, faqPool, faqDisplayed, fullItems, showCount);
+      if (btn) container.appendChild(btn);
+    });
+  }
+
   function getReply(text) {
     if (!definition) return "まだ準備中だからちょっと待ってね。";
     return typeof RulesEngine !== "undefined" && RulesEngine.getReply
@@ -54,9 +126,10 @@
       definition = merged;
       renderSelfIntro(merged);
       renderRecent(merged);
+      renderFaqButtons(merged);
 
       if (typeof ChatUI !== "undefined" && ChatUI.bindSubmit) {
-        ChatUI.bindSubmit(getReply);
+        ChatUI.bindSubmit(getReply, getNextPairNumber);
       }
     });
   }

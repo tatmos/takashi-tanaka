@@ -1,14 +1,25 @@
 {
+  "note": "1 インテント = 複数キーワード（言い換え）で同じ template。profile/basic のキーを {{profile.xxx}} で参照すると定義変更に強い。",
   "rules": [
-    { "id": "who", "keywords": ["誰", "名前", "たかし", "田中", "自己紹介"], "template": "{{displayName}}。{{oneLinerJa}}", "keys": ["basic.displayName", "basic.oneLinerJa"] },
-    { "id": "reward", "keywords": ["報酬", "やりがい", "主報酬"], "template": "主報酬は「{{reward}}」だね。", "keys": ["profile.reward"] },
-    { "id": "type", "keywords": ["タイプ", "思考", "エンジニア", "R&D"], "template": "{{type}}ってとこ。世界を sandbox として扱う感じ。", "keys": ["profile.type"] },
-    { "id": "motive", "keywords": ["動機", "なぜ", "やりたい"], "template": "世界に存在しない構造を作りたい、って動機。", "keys": ["profile.motive"] },
-    { "id": "stop", "keywords": ["止める", "停止", "やめる", "難し"], "template": "技術的に難しすぎて、今のリソースでは突破できないとき。", "keys": ["profile.stopReason"] },
-    { "id": "future", "keywords": ["10年", "将来", "未来"], "template": "自由に面白い実験を続けたい。", "keys": ["profile.future10y"] },
-    { "id": "link", "keywords": ["サイト", "ホームページ", "リンク", "park18"], "template": "サイトは {{public.links.homepage}} だよ。X は {{public.links.twitter}} 。", "keys": ["public.links.homepage", "public.links.twitter"] },
-    { "id": "sns", "keywords": ["Twitter", "X", "SNS", "tatmos"], "template": "X は https://x.com/tatmos だよ。", "keys": [] },
-    { "id": "greeting", "keywords": ["こんにちは", "はじめまして", "よろしく"], "template": "よろしく。いろいろ聞いてくれてOK。", "keys": [] }
+    { "id": "who", "keywords": ["誰", "名前", "たかし", "田中", "自己紹介", "どなた"], "template": "{{basic.displayName}}。{{basic.oneLinerJa}}", "keys": ["basic.displayName", "basic.oneLinerJa"] },
+    { "id": "reward", "keywords": ["報酬", "やりがい", "主報酬", "うれしい", "何が楽しい", "何が好き"], "template": "主報酬は「{{profile.reward}}」だね。", "keys": ["profile.reward"] },
+    { "id": "type", "keywords": ["タイプ", "思考", "エンジニア", "R&D", "何系", "どんな人"], "template": "{{profile.type}}ってとこ。世界を sandbox として扱う感じ。", "keys": ["profile.type"] },
+    { "id": "motive", "keywords": ["動機", "なぜ", "やりたい", "何がやりたい", "きっかけ"], "template": "世界に存在しない構造を作りたい、って動機。", "keys": ["profile.motive"] },
+    { "id": "stop", "keywords": ["止める", "停止", "やめる", "難し", "限界", "諦める"], "template": "技術的に難しすぎて、今のリソースでは突破できないとき。", "keys": ["profile.stopReason"] },
+    { "id": "future", "keywords": ["10年", "将来", "未来", "夢", "どうしていたい"], "template": "{{profile.future10y}}。", "keys": ["profile.future10y"] },
+    { "id": "selfImage", "keywords": ["自己認知", "研究者", "思想家", "自分をどう思う"], "template": "{{profile.selfImage}}。実装で現実を変える方に寄ってる。", "keys": ["profile.selfImage"] },
+    { "id": "income", "keywords": ["収益", "収入", "給与", "お金", "稼ぎ"], "template": "主に労働型（給与）だね。実験の電源って考えてる。", "keys": ["profile.income"] },
+    { "id": "link", "keywords": ["サイト", "ホームページ", "リンク", "park18", "URL", "どこで見れる"], "template": "サイトは {{public.links.homepage}} だよ。X は {{public.links.twitter}} 。", "keys": ["public.links.homepage", "public.links.twitter"] },
+    { "id": "sns", "keywords": ["Twitter", "X", "SNS", "tatmos", "アカウント"], "template": "X は https://x.com/tatmos だよ。", "keys": [] },
+    { "id": "greeting", "keywords": ["こんにちは", "はじめまして", "よろしく", "おつかれ"], "template": "よろしく。いろいろ聞いてくれてOK。", "keys": [] },
+    { "id": "help", "keywords": ["何が聞ける", "できること", "ヘルプ", "使い方"], "template": "名前やタイプ、やりがい、リンクとか、なんでも聞いて。", "keys": [] },
+    { "id": "games", "keywords": ["ゲーム", "開発したゲーム", "作ったゲーム", "ゲーム一覧"], "template": "{{site-content.games.description}}。{{site-content.games.examples}} 詳しくは {{site-content.gameUrl}} を見てね。", "keys": ["site-content.games.description", "site-content.games.examples", "site-content.gameUrl"] },
+    { "id": "works", "keywords": ["作品", "works", "ライブワーク", "Dance", "Music", "Visualize"], "template": "{{site-content.works.description}}。詳しくは {{site-content.worksUrl}} を見てね。", "keys": ["site-content.works.description", "site-content.worksUrl"] },
+    { "id": "event", "keywords": ["イベント", "開催", "サウンドミニハッカソン", "サウンドゲームジャム"], "template": "{{site-content.event.description}} 詳しくは {{site-content.eventUrl}} を見てね。", "keys": ["site-content.event.description", "site-content.eventUrl"] },
+    { "id": "program", "keywords": ["プログラム", "コード", "github", "itch.io", "unityroom", "どこで公開"], "template": "{{site-content.program.description}} 詳しくは {{site-content.programUrl}} を見てね。", "keys": ["site-content.program.description", "site-content.programUrl"] },
+    { "id": "cedec", "keywords": ["CEDEC", "SIG-AUDIO", "勉強会"], "template": "CEDEC・SIG-AUDIO・勉強会にも出てる。サイトの該当ページを見てね。{{site-content.homepage}}", "keys": ["site-content.homepage"] },
+    { "id": "live", "keywords": ["ライブ", "LIVE"], "template": "ライブ関連はサイトの LIVE や works を見てね。{{site-content.worksUrl}}", "keys": ["site-content.worksUrl"] },
+    { "id": "sound", "keywords": ["サウンド", "CD", "DVD", "AppleMusic", "Spotify"], "template": "サウンド（CD・DVD・AppleMusic・Spotify）はサイトの該当ページを見てね。{{site-content.homepage}}", "keys": ["site-content.homepage"] }
   ],
   "fallback": "その質問にはまだ答えられないかも。別の聞き方か、別の話題で聞いてみて。"
 }
