@@ -1,0 +1,14 @@
+{
+  "rules": [
+    { "id": "who", "keywords": ["誰", "名前", "たかし", "田中", "自己紹介"], "template": "{{displayName}}。{{oneLinerJa}}", "keys": ["basic.displayName", "basic.oneLinerJa"] },
+    { "id": "reward", "keywords": ["報酬", "やりがい", "主報酬"], "template": "主報酬は「{{reward}}」だね。", "keys": ["profile.reward"] },
+    { "id": "type", "keywords": ["タイプ", "思考", "エンジニア", "R&D"], "template": "{{type}}ってとこ。世界を sandbox として扱う感じ。", "keys": ["profile.type"] },
+    { "id": "motive", "keywords": ["動機", "なぜ", "やりたい"], "template": "世界に存在しない構造を作りたい、って動機。", "keys": ["profile.motive"] },
+    { "id": "stop", "keywords": ["止める", "停止", "やめる", "難し"], "template": "技術的に難しすぎて、今のリソースでは突破できないとき。", "keys": ["profile.stopReason"] },
+    { "id": "future", "keywords": ["10年", "将来", "未来"], "template": "自由に面白い実験を続けたい。", "keys": ["profile.future10y"] },
+    { "id": "link", "keywords": ["サイト", "ホームページ", "リンク", "park18"], "template": "サイトは {{public.links.homepage}} だよ。X は {{public.links.twitter}} 。", "keys": ["public.links.homepage", "public.links.twitter"] },
+    { "id": "sns", "keywords": ["Twitter", "X", "SNS", "tatmos"], "template": "X は https://x.com/tatmos だよ。", "keys": [] },
+    { "id": "greeting", "keywords": ["こんにちは", "はじめまして", "よろしく"], "template": "よろしく。いろいろ聞いてくれてOK。", "keys": [] }
+  ],
+  "fallback": "その質問にはまだ答えられないかも。別の聞き方か、別の話題で聞いてみて。"
+}

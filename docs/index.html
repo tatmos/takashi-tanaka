@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>自分という人間システム — README</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>自分という人間システムの README（仕様書）</h1>
+      <p class="subtitle">率直・本質的なアドバイザーAI の受け皿となる自分仕様書</p>
+    </header>
+
+    <section id="provisional-model" class="card">
+      <h2>暫定モデル</h2>
+      <ul>
+        <li><strong>思考OS:</strong> 探索型R&Dエンジニア（世界を sandbox として扱う）</li>
+        <li><strong>主報酬:</strong> 実装が現実で動いた瞬間</li>
+        <li><strong>開始動機:</strong> 世界に存在しない構造を作りたい</li>
+        <li><strong>停止理由:</strong> 技術的に難しすぎる（現リソースでは突破不能）</li>
+        <li><strong>自己認知:</strong> 研究者・思想家寄り</li>
+        <li><strong>10年後:</strong> 自由に面白い実験を続けたい</li>
+        <li><strong>公開/完了/フィードバック:</strong> 多い</li>
+        <li><strong>中断プロジェクト:</strong> 多い</li>
+        <li><strong>収益:</strong> 主に労働型（給与）</li>
+      </ul>
+    </section>
+
+    <section id="confirmed-params" class="card">
+      <h2>確定パラメータ</h2>
+      <p id="confirmed-summary" class="status-note" aria-live="polite">今、何が確定したか: 0 / 3 項目</p>
+      <p class="status-note">選択式 Q&A で 1 問ずつ確定し、ここに反映します。</p>
+      <div id="param-display" aria-live="polite">
+        <!-- app.js で「今、何が確定したか」を表示 -->
+        <div class="param-item" data-param="1">
+          <h3>1. “難しすぎた”の内訳</h3>
+          <p class="value"><span class="placeholder">未確定（理論 / 時間 / 精神 / スキル / 環境）</span></p>
+        </div>
+        <div class="param-item" data-param="2">
+          <h3>2. 他者の位置づけ</h3>
+          <p class="value"><span class="placeholder">未確定（観測者 / 共犯者 / センサー / ノイズ）</span></p>
+        </div>
+        <div class="param-item" data-param="3">
+          <h3>3. 感情摩擦トリガー</h3>
+          <p class="value"><span class="placeholder">未確定（落ち込み・怒り・無力感のトリガー）</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="repo-rules" class="card">
+      <h2>Repo 運用ルール</h2>
+      <p>実験は <code>experiments/</code> 以下。命名は <code>YYYYMM-短い名前</code>。詳細はリポジトリ README を参照。</p>
+    </section>
+
+    <footer>
+      <p><a href="https://github.com/takashi-tanaka/takashi-tanaka">Repository</a></p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

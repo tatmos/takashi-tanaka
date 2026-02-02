@@ -1,0 +1,12 @@
+---
+description: このリポジトリの運用ルール
+globs: 
+alwaysApply: true
+---
+
+# Repo 運用ルール
+
+- **実験の置き場所:** 実験は `experiments/` 以下に置く。`/docs` は公開用で変更頻度を抑える。
+- **命名:** `experiments/YYYYMM-短い名前` のように日付プレフィックスを使う。
+- **README:** ルート README は「人間システム仕様書」とこの repo の目的・運用に限定。各実験は `experiments/<名>/README.md` で完結させる。
+- **公開:** Web 版はルート（`index.html`）。GitHub Pages の公開ディレクトリは **/ (root)**。

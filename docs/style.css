@@ -1,0 +1,140 @@
+/* ミニマル・暗背景・読みやすさ優先 */
+
+:root {
+  --bg: #1a1a1c;
+  --surface: #242428;
+  --text: #e4e4e7;
+  --text-muted: #a1a1aa;
+  --accent: #7c9cbf;
+  --border: #3f3f46;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  color: var(--text);
+}
+
+h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0.75rem 0 0.25rem 0;
+  color: var(--text-muted);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.card li {
+  margin-bottom: 0.35rem;
+}
+
+.card li:last-child {
+  margin-bottom: 0;
+}
+
+.status-note {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0 0 1rem 0;
+}
+
+#param-display .param-item {
+  margin-bottom: 1rem;
+}
+
+#param-display .param-item:last-child {
+  margin-bottom: 0;
+}
+
+.value .placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.value.confirmed {
+  font-style: normal;
+  color: var(--text);
+}
+
+.value.confirmed .placeholder {
+  font-style: normal;
+  color: inherit;
+}
+
+code {
+  font-size: 0.88em;
+  background: var(--bg);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}

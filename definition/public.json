@@ -1,0 +1,17 @@
+{
+  "note": "公開してよい情報のみ。park18.wakwak.com/~cha/ を参照。個人を特定し得る連絡先・住所・パスワード等は含めない。",
+  "links": {
+    "homepage": "http://park18.wakwak.com/~cha/index.html",
+    "twitter": "https://x.com/tatmos"
+  },
+  "categories": {
+    "GAME": "ゲーム関連",
+    "EVENT": "イベント",
+    "TEXT": "テキスト・記事",
+    "CEDEC": "CEDEC・SIG-AUDIO・勉強会",
+    "LIVE": "ライブ",
+    "GRAPHIC": "グラフィック",
+    "PROGRAM": "プログラム",
+    "sound": "サウンド（CD・DVD・AppleMusic・Spotify）"
+  }
+}

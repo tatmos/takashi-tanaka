@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AIたなかたかし — いろいろ質問どうぞ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>AIたなかたかし</h1>
+      <p class="subtitle">いろいろ聞いてね。気軽にどうぞ。</p>
+    </header>
+
+    <section id="self-intro-section" class="card">
+      <h2>たなかたかしについて</h2>
+      <div id="self-intro" aria-live="polite">
+        <p class="status-note">読み込み中…</p>
+      </div>
+    </section>
+
+    <section id="recent-section" class="card">
+      <h2>最近のこと</h2>
+      <p id="recent-summary" class="recent-summary">最近のことは X（<a href="https://x.com/tatmos">@tatmos</a>）で発信してるよ。下のタイムラインで見てね。</p>
+      <div class="twitter-embed" aria-label="X タイムライン">
+        <a class="twitter-timeline" data-dnt="true" data-theme="dark" data-chrome="noheader nofooter noborders" href="https://x.com/tatmos">Tweets by tatmos</a>
+      </div>
+    </section>
+
+    <section id="chat-section" class="card">
+      <h2>なんでも聞いて</h2>
+      <form id="chat-form" class="chat-form">
+        <label for="chat-input" class="visually-hidden">質問を入力</label>
+        <input type="text" id="chat-input" class="chat-input" placeholder="いろいろ聞いてみて" autocomplete="off">
+        <button type="submit" class="chat-submit">送信</button>
+      </form>
+      <div id="chat-history" class="chat-history" aria-live="polite"></div>
+    </section>
+
+    <footer>
+      <p><a href="http://park18.wakwak.com/~cha/index.html">park18</a> · <a href="https://x.com/tatmos">X @tatmos</a> · <a href="https://github.com/takashi-tanaka/takashi-tanaka">Repository</a></p>
+    </footer>
+  </main>
+  <script src="js/definition-loader.js"></script>
+  <script src="js/rules-engine.js"></script>
+  <script src="js/chat-ui.js"></script>
+  <script src="js/app.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>
