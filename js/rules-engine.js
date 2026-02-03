@@ -52,10 +52,13 @@
     }
     const rules = definition.rules;
     const rule = matchRule(input, rules);
+    if (rule && rule.echo) {
+      return (input && input.trim()) || "";
+    }
     if (rule && rule.template) {
       return fillTemplate(rule.template, definition);
     }
-    return (rules && rules.fallback) || "その質問にはまだ答えられないかも。別の聞き方か、別の話題で聞いてみて。";
+    return (input && input.trim()) || (rules && rules.fallback) || "その質問にはまだ答えられないかも。別の聞き方か、別の話題で聞いてください。";
   }
 
   global.RulesEngine = {

@@ -14,6 +14,8 @@
     "rules",
     "recent",
     "faq",
+    "behavior",
+    "timeline",
   ];
   const DEFINITION_BASE = "definition/";
 

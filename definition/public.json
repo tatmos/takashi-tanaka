@@ -1,8 +1,25 @@
 {
-  "note": "公開してよい情報のみ。park18.wakwak.com/~cha/ を参照。個人を特定し得る連絡先・住所・パスワード等は含めない。",
+  "note": "公開してよい情報のみ。park18.wakwak.com/~cha/ を参照。個人を特定し得る連絡先・住所・パスワード等は含めない。links の qiita / note / youtube / facebook は実際のURLに差し替えて。無い場合は空文字で非表示扱い可。soundMiniHackathon / soundGameJam / soundTasukeai は各イベントの公式ページURLに差し替えて。highlights にバズったツイート・記事・動画のURLを追加できる。",
   "links": {
     "homepage": "http://park18.wakwak.com/~cha/index.html",
-    "twitter": "https://x.com/tatmos"
+    "twitter": "https://x.com/tatmos",
+    "qiita": "https://qiita.com/tatmos",
+    "note": "https://note.com/tatmos",
+    "youtube": "https://www.youtube.com/@tatmos",
+    "repository": "https://github.com/takashi-tanaka/takashi-tanaka",
+    "soundMiniHackathon": "https://effectorhack.connpass.com/",
+    "soundGameJam": "https://connpass.com/search/?q=%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%B8%E3%83%A3%E3%83%A0",
+    "soundTasukeai": "http://www53.atwiki.jp/soundtasukeai/pages/1.html",
+    "tumblr": "http://tatmos.tumblr.com/",
+    "instagram": "https://www.instagram.com/tatmos_/",
+    "facebook": ""
+  },
+  "highlights": {
+    "tweets": [],
+    "qiita": [],
+    "note": [],
+    "youtube": [],
+    "facebook": []
   },
   "categories": {
     "GAME": "ゲーム関連",

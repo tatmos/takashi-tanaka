@@ -24,7 +24,7 @@ body {
 }
 
 main {
-  max-width: 42rem;
+  max-width: 56rem;
   margin: 0 auto;
   padding: 2rem 1.25rem;
 }
@@ -200,6 +200,70 @@ a:hover {
   color: var(--accent);
 }
 
+.faq-btn--answered {
+  opacity: 0.7;
+  border-style: dashed;
+}
+
+/* 直近の Q と A のみ表示（通常時） */
+.current-qa {
+  margin-bottom: 0.75rem;
+  min-height: 4rem;
+}
+
+.current-qa-placeholder {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.current-qa-pair {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  background: var(--bg);
+}
+
+.current-qa-pair .chat-row {
+  margin-bottom: 0.75rem;
+}
+
+.current-qa-pair .chat-row:last-child {
+  margin-bottom: 0;
+}
+
+.current-qa-pair .chat-label {
+  font-weight: 600;
+}
+
+.chat-history-btn {
+  margin-bottom: 0.75rem;
+  padding: 0.4rem 0.85rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.chat-history-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.chat-history-container.is-hidden {
+  display: none;
+}
+
+.chat-section.show-history .current-qa {
+  display: none;
+}
+
+.chat-section.show-history .chat-history-container {
+  display: block;
+}
+
 .chat-history {
   max-height: 20rem;
   overflow-y: auto;
@@ -207,6 +271,26 @@ a:hover {
 
 .chat-row {
   margin-bottom: 0.75rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.chat-row--user .chat-row-content {
+  flex: 1;
+}
+
+.chat-row--bot .chat-avatar {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chat-row--bot .chat-row-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .chat-row--user .chat-label {
@@ -229,7 +313,8 @@ a:hover {
 
 .chat-body a {
   color: var(--accent);
-  word-break: break-all;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .visually-hidden {

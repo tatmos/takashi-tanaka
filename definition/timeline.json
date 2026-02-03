@@ -1,0 +1,141 @@
+{
+  "note": "年代別の情報。ここ1年は「最近は」で答える。情報源は各SNSの時刻タグ、C:\\Users\\cha\\Documents\\web 以下の日付情報。ふるまいルール.md 5 節参照。",
+  "sources": [
+    "各SNSの時刻タグ（X の投稿日時など）",
+    "C:\\Users\\cha\\Documents\\web 以下の HTML（game.html, cedec.html, event.html 等）の .date など"
+  ],
+  "recentYear": {
+    "summary": "Crowbar Climber、Guerrilla Gorilla、Little Thief、Bad Bunny Bonanza、Devil's Roulette、Mad Surgeon、チェインドエスケイプ、Ghost Photographers、スティックキャッチャーなどに関わっています。CEDEC 2025 や ADX／ADX LE 勉強会での発表、サウンドミニハッカソン・サウンドゲームジャムも継続しています。",
+    "items": [
+      { "label": "Crowbar Climber", "date": "2024.10", "category": "game" },
+      { "label": "Guerrilla Gorilla: Megajaws Attacks!", "date": "2025.6", "category": "game" },
+      { "label": "Little Thief", "date": "2025.6", "category": "game" },
+      { "label": "Bad Bunny Bonanza", "date": "2025.6", "category": "game" },
+      { "label": "Devil's Roulette", "date": "2025.5", "category": "game" },
+      { "label": "Mad Surgeon -Goblin Hospital-", "date": "2025.4", "category": "game" },
+      { "label": "チェインドエスケイプ", "date": "2025.4", "category": "game" },
+      { "label": "Ghost Photographers", "date": "2025.2", "category": "game" },
+      { "label": "スティックキャッチャー", "date": "2025.1", "category": "game" },
+      { "label": "CEDEC 2025 Unity向け軽量サウンドマネージャー", "date": "2025", "category": "cedec" },
+      { "label": "ADX／ADX LE 勉強会 vol.3 Ghost Photographers", "date": "2025.6", "category": "cedec" },
+      { "label": "サウンドミニハッカソン・サウンドゲームジャム", "category": "event" }
+    ]
+  },
+  "byYear": {
+    "2025": {
+      "summary": "BazookaStudio タイトル（Guerrilla Gorilla、Little Thief、Bad Bunny Bonanza、Devil's Roulette、Mad Surgeon、チェインドエスケイプ、Ghost Photographers、スティックキャッチャー）のサウンド制作・サウンドマネージャー。CEDEC 2025 で軽量サウンドマネージャーの発表、ADX／ADX LE 勉強会で Ghost Photographers 事例発表。",
+      "items": [
+        { "label": "Guerrilla Gorilla: Megajaws Attacks!", "date": "2025.6", "category": "game" },
+        { "label": "Little Thief", "date": "2025.6", "category": "game" },
+        { "label": "Bad Bunny Bonanza", "date": "2025.6", "category": "game" },
+        { "label": "Devil's Roulette", "date": "2025.5", "category": "game" },
+        { "label": "Mad Surgeon -Goblin Hospital-", "date": "2025.4", "category": "game" },
+        { "label": "チェインドエスケイプ", "date": "2025.4", "category": "game" },
+        { "label": "Ghost Photographers", "date": "2025.2", "category": "game" },
+        { "label": "スティックキャッチャー", "date": "2025.1", "category": "game" },
+        { "label": "CEDEC 2025 軽量サウンドマネージャー", "category": "cedec" },
+        { "label": "ADX／ADX LE 勉強会 vol.3 Ghost Photographers", "date": "2025.6", "category": "cedec" }
+      ]
+    },
+    "2024": {
+      "summary": "Crowbar Climber の BGM・効果音・サウンドマネージャー。ブレイゼンブレイズ（PC/Quest）のテクニカルオーディオ・サウンド。CEDEC 2024 でブレイゼンブレイズのイマーシブオーディオとボイスチャットの発表。",
+      "items": [
+        { "label": "Crowbar Climber", "date": "2024.10", "category": "game" },
+        { "label": "ブレイゼンブレイズ", "date": "2024", "category": "game" },
+        { "label": "CEDEC 2024 ブレイゼンブレイズ イマーシブオーディオ", "category": "cedec" },
+        { "label": "CEDEC 2024 ブレイゼンブレイズ ボイスチャット", "category": "cedec" }
+      ]
+    },
+    "2023": {
+      "summary": "SIG-AUDIO #22 で VR アドベンチャー『ディスクロニアCA』のサウンド演出を発表。",
+      "items": [
+        { "label": "SIG-AUDIO #22 ディスクロニアCA サウンド演出", "date": "2023.12", "category": "cedec" }
+      ]
+    },
+    "2022": {
+      "summary": "Dyschronia : CA（Quest2, PSVR2, Switch, PC）のサウンドエンジニア・サウンドクリエーター。",
+      "items": [
+        { "label": "Dyschronia : CA", "date": "2022", "category": "game" }
+      ]
+    },
+    "2021": {
+      "summary": "CEDEC 2021 で VR アドベンチャー『アルトデウスBC』VR 近未来サウンドデザインを発表。",
+      "items": [
+        { "label": "CEDEC 2021 アルトデウスBC VR 近未来サウンド", "category": "cedec" }
+      ]
+    },
+    "2020": {
+      "summary": "Altdeus : Beyond Chronos（Quest1, PC, PSVR1）のサウンドエンジニア・サウンドクリエーター。",
+      "items": [
+        { "label": "Altdeus : Beyond Chronos", "date": "2020", "category": "game" }
+      ]
+    },
+    "2019": {
+      "summary": "MyDearest で Altdeus 開発に参加。J-WAVE INNOVATION WORLD LIVE PLUS（豊洲PIT）で音声解析。",
+      "items": [
+        { "label": "Altdeus : Beyond Chronos 開発", "date": "2019.9", "category": "game" },
+        { "label": "J-WAVE INNOVATION WORLD LIVE PLUS 音声解析", "date": "2019.1", "category": "live" }
+      ]
+    },
+    "2018": {
+      "summary": "CEDEC 2018 で Hapbeat を用いた力触覚の発表。Music×Tech Showcase、Tokyo Blocks Hackathon、GitHub Satellite Tokyo などライブ・ハッカソン参加。",
+      "items": [
+        { "label": "CEDEC 2018 Hapbeat 力触覚", "category": "cedec" },
+        { "label": "Music×Tech Showcase TIMM", "date": "2018.10", "category": "live" },
+        { "label": "Tokyo Blocks Hackathon", "date": "2018.10", "category": "live" },
+        { "label": "GitHub Satellite Tokyo", "date": "2018.6", "category": "live" }
+      ]
+    },
+    "2017": {
+      "summary": "サウンド助け合い所の運営・書き込みを開始。",
+      "items": [
+        { "label": "サウンド助け合い所", "category": "event" }
+      ]
+    },
+    "2015": {
+      "summary": "サウンドミニハッカソン・サウンドゲームジャムを開始（継続中）。",
+      "items": [
+        { "label": "サウンドミニハッカソン", "category": "event" },
+        { "label": "サウンドゲームジャム", "category": "event" }
+      ]
+    },
+    "2013": {
+      "summary": "GCS2013 でサウンドゲームジャムをやる会主催。ADX2 LE ワークショップ。",
+      "items": [
+        { "label": "ゲームコミュニティサミット2013 サウンドゲームジャム主催", "date": "2013.6", "category": "cedec" },
+        { "label": "ADX2 LE ワークショップ", "category": "cedec" }
+      ]
+    },
+    "2012": {
+      "summary": "CEDEC 2012 で CRI ADX2 サウンドオーサリングツール体験会。",
+      "items": [
+        { "label": "CEDEC 2012 CRI ADX2 体験会", "category": "cedec" }
+      ]
+    },
+    "2009": {
+      "summary": "CRI Atom Craft のサウンドプログラマー（ブロック再生・REACT など）。",
+      "items": [
+        { "label": "CRI Atom Craft", "date": "2009.12", "category": "game" }
+      ]
+    },
+    "2007": {
+      "summary": "CRI・ミドルウェアで CRI Audio / CRI Audio V3。CEDEC 2007 で CRI Audio 環境音のセッション。",
+      "items": [
+        { "label": "CRI Audio, CRI Audio V3", "date": "2007.3", "category": "game" },
+        { "label": "CEDEC 2007 CRI Audio 環境音", "category": "cedec" }
+      ]
+    },
+    "2006": {
+      "summary": "CEDEC 2006 で CRI Audio 初級・中級編のセッション。",
+      "items": [
+        { "label": "CEDEC 2006 CRI Audio 初級・中級", "category": "cedec" }
+      ]
+    },
+    "2000": {
+      "summary": "SEGA-AM2 で SoundFactory2（Mac）のサウンドプログラマー。Naomi, DreamCast, PS2, Xbox, Nintendo GameCube 向け。",
+      "items": [
+        { "label": "SEGA-AM2 SoundFactory2", "date": "2000", "category": "game" }
+      ]
+    }
+  }
+}

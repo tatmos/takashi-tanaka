@@ -10,7 +10,7 @@
   <main>
     <header>
       <h1>AIたなかたかし</h1>
-      <p class="subtitle">いろいろ聞いてね。気軽にどうぞ。</p>
+      <p class="subtitle">なんでもきいてみてください。気軽にどうぞ。</p>
     </header>
 
     <section id="self-intro-section" class="card">
@@ -22,7 +22,7 @@
 
     <section id="recent-section" class="card">
       <h2>最近のこと</h2>
-      <p id="recent-summary" class="recent-summary">最近のことは X（<a href="https://x.com/tatmos">@tatmos</a>）で発信してるよ。下のタイムラインで見てね。</p>
+      <p id="recent-summary" class="recent-summary">最近のことは X（<a href="https://x.com/tatmos">@tatmos</a>）で発信しています。下のタイムラインで見てください。</p>
       <div class="twitter-embed" aria-label="X タイムライン">
         <a class="twitter-timeline" data-dnt="true" data-theme="dark" data-chrome="noheader nofooter noborders" href="https://x.com/tatmos">Tweets by tatmos</a>
       </div>
@@ -32,16 +32,22 @@
       <h2>なんでも聞いて</h2>
       <form id="chat-form" class="chat-form">
         <label for="chat-input" class="visually-hidden">質問を入力</label>
-        <input type="text" id="chat-input" class="chat-input" placeholder="いろいろ聞いてみて" autocomplete="off">
+        <input type="text" id="chat-input" class="chat-input" placeholder="何がやりたいですか？ 開発したゲームは？ など" autocomplete="off">
         <button type="submit" class="chat-submit">送信</button>
       </form>
       <p class="faq-label">よくある質問</p>
       <div id="faq-buttons" class="faq-buttons" aria-live="polite"></div>
-      <div id="chat-history" class="chat-history" aria-live="polite"></div>
+      <div id="current-qa" class="current-qa" aria-live="polite" aria-label="直近の質問と回答">
+        <p class="current-qa-placeholder">質問を送信すると、ここに Q と A が表示されます。</p>
+      </div>
+      <button type="button" id="chat-history-btn" class="chat-history-btn" aria-expanded="false" aria-controls="chat-history-container">履歴</button>
+      <div id="chat-history-container" class="chat-history-container is-hidden" aria-label="会話履歴">
+        <div id="chat-history" class="chat-history" aria-live="polite"></div>
+      </div>
     </section>
 
     <footer>
-      <p><a href="http://park18.wakwak.com/~cha/index.html">park18</a> · <a href="https://x.com/tatmos">X @tatmos</a> · <a href="https://github.com/takashi-tanaka/takashi-tanaka">Repository</a></p>
+      <p class="footer-links">読み込み中…</p>
     </footer>
   </main>
   <script src="js/definition-loader.js"></script>
