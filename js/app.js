@@ -43,6 +43,61 @@
     el.innerHTML = linked;
   }
 
+  function renderTimeline(merged) {
+    const summaryEl = document.getElementById("timeline-summary");
+    const viewEl = document.getElementById("timeline-view");
+    if (!viewEl || !merged.timeline) {
+      if (viewEl) viewEl.innerHTML = "<p class=\"status-note\">タイムラインデータがありません。</p>";
+      return;
+    }
+    const timeline = merged.timeline;
+    const recentYear = timeline.recentYear;
+    const maxItems = 30;
+
+    if (summaryEl && recentYear && recentYear.summary) {
+      summaryEl.textContent = recentYear.summary;
+    } else if (summaryEl) {
+      summaryEl.textContent = "";
+    }
+
+    const items = (recentYear && recentYear.items) ? recentYear.items.slice(0, maxItems) : [];
+    if (items.length === 0) {
+      viewEl.innerHTML = "<p class=\"status-note\">表示する項目がありません。</p>";
+      return;
+    }
+
+    const byYear = timeline.byYear || {};
+    const years = Object.keys(byYear).sort(function (a, b) { return Number(b) - Number(a); });
+
+    let html = "<ul class=\"timeline-list\">";
+    items.forEach(function (item) {
+      const date = (item.date != null && String(item.date).trim()) ? String(item.date).trim() : "—";
+      const label = (item.label != null) ? String(item.label).trim() : "";
+      const cat = (item.category && String(item.category).trim()) ? " timeline-item--" + String(item.category).trim() : "";
+      html += "<li class=\"timeline-item" + cat + "\">";
+      html += "<span class=\"timeline-date\">" + escapeHtml(date) + "</span>";
+      html += "<span class=\"timeline-label\">" + escapeHtml(label) + "</span>";
+      html += "</li>";
+    });
+    html += "</ul>";
+
+    if (years.length > 0) {
+      html += "<p class=\"timeline-years-note\">年別: ";
+      html += years.slice(0, 15).map(function (y) { return "<span class=\"timeline-year\">" + escapeHtml(y) + "</span>"; }).join(" ");
+      if (years.length > 15) html += " …";
+      html += "</p>";
+    }
+
+    viewEl.innerHTML = html;
+  }
+
+  function escapeHtml(s) {
+    if (!s) return "";
+    const div = document.createElement("div");
+    div.textContent = s;
+    return div.innerHTML;
+  }
+
   function renderFooter(merged) {
     const footer = document.querySelector("footer p");
     if (!footer || !merged.public || !merged.public.links) return;
@@ -168,6 +223,7 @@
       definition = merged;
       renderSelfIntro(merged);
       renderRecent(merged);
+      renderTimeline(merged);
       renderFaqButtons(merged);
       renderFooter(merged);
 

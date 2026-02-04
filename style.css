@@ -119,6 +119,74 @@ h3 {
   max-width: 100%;
 }
 
+/* --- タイムライン（仮） --- */
+
+.timeline-summary {
+  margin: 0 0 1rem 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.timeline-view {
+  margin-top: 0.5rem;
+}
+
+.timeline-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid var(--border);
+  padding-left: 1rem;
+  margin-left: 0.25rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 0.85rem;
+  padding-left: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1.25rem;
+  top: 0.4rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-date {
+  display: inline-block;
+  min-width: 4rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-right: 0.75rem;
+  vertical-align: top;
+}
+
+.timeline-label {
+  display: inline;
+  font-size: 0.9rem;
+  color: var(--text);
+  word-break: break-word;
+}
+
+.timeline-years-note {
+  margin: 1rem 0 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.timeline-year {
+  margin-right: 0.5rem;
+}
+
 code {
   font-size: 0.88em;
   background: var(--bg);
