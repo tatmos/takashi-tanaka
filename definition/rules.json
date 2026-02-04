@@ -303,9 +303,11 @@
         "MMD伊香保温泉オフ",
         "iレンコン"
       ],
-      "template": "VRの朝活やコミュニティにも参加しています。Resoniteラジオ体操部、questラジオ体操部、テセウスの運動朝活、むりCafe、バーチャル沖縄など。詳しくは X のタイムライン（{{public.links.twitter}}）やサイトを見てください。",
+      "template": "VRの朝活やコミュニティにも参加しています。questラジオ体操部は {{public.links.questRadiotaisoubu}}、むりCafe は {{public.links.muriCafe}}。Resoniteラジオ体操部、テセウスの運動朝活、バーチャル沖縄なども。詳しくは X のタイムライン（{{public.links.twitter}}）やサイトを見てください。",
       "keys": [
-        "public.links.twitter"
+        "public.links.twitter",
+        "public.links.questRadiotaisoubu",
+        "public.links.muriCafe"
       ]
     },
     {
