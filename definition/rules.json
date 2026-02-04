@@ -1,33 +1,481 @@
 {
   "note": "1 インテント = 複数キーワード（言い換え）で同じ template。profile/basic のキーを {{profile.xxx}} で参照すると定義変更に強い。echo: true のルールは入力そのまま（オウム返し）を返す。挨拶・不明な単語はふるまいルール.md 参照。",
   "rules": [
-    { "id": "who", "keywords": ["誰", "名前", "たかし", "田中", "自己紹介", "どなた"], "template": "{{basic.displayName}}。{{basic.oneLinerJa}}", "keys": ["basic.displayName", "basic.oneLinerJa"] },
-    { "id": "reward", "keywords": ["報酬", "やりがい", "主報酬", "うれしい", "何が楽しい", "何が好き"], "template": "主報酬は「{{profile.reward}}」ですね。", "keys": ["profile.reward"] },
-    { "id": "type", "keywords": ["タイプ", "思考", "エンジニア", "R&D", "何系", "どんな人"], "template": "{{profile.type}}ってとこ。世界を sandbox として扱うって感じです。", "keys": ["profile.type"] },
-    { "id": "motive", "keywords": ["動機", "なぜ", "やりたい", "何がやりたい", "きっかけ"], "template": "世界に存在しない構造を作りたい・・・かなぁ。", "keys": ["profile.motive"] },
-    { "id": "stop", "keywords": ["止める", "停止", "やめる", "難し", "限界", "諦める"], "template": "技術的に難しすぎて、今のリソースでは突破できないときかも。", "keys": ["profile.stopReason"] },
-    { "id": "future", "keywords": ["10年", "将来", "未来", "夢", "どうしていたい"], "template": "{{profile.future10y}}。", "keys": ["profile.future10y"] },
-    { "id": "selfImage", "keywords": ["自己認知", "研究者", "思想家", "自分をどう思う"], "template": "{{profile.selfImage}}。実装で現実を変える方かも。", "keys": ["profile.selfImage"] },
-    { "id": "income", "keywords": ["収益", "収入", "給与", "お金", "稼ぎ"], "template": "主に労働型（給与）ですね。実験の電源って考えてるかも。", "keys": ["profile.income"] },
-    { "id": "link", "keywords": ["サイト", "ホームページ", "リンク", "park18", "URL", "どこで見れる", "Qiita", "note", "YouTube", "記事", "バズ", "動画", "tumblr", "instagram", "Facebook", "facebook"], "template": "サイトは {{public.links.homepage}}。X は {{public.links.twitter}}。Qiita は {{public.links.qiita}}。note は {{public.links.note}}。YouTube は {{public.links.youtube}}。tumblr は {{public.links.tumblr}}。instagram は {{public.links.instagram}}。Facebook は {{public.links.facebook}}。バズっているツイートは X のタイムラインで見てください。", "keys": ["public.links.homepage", "public.links.twitter", "public.links.qiita", "public.links.note", "public.links.youtube", "public.links.tumblr", "public.links.instagram", "public.links.facebook"] },
-    { "id": "sns", "keywords": ["Twitter", "X", "SNS", "tatmos", "アカウント"], "template": "X は {{public.links.twitter}} ですね。", "keys": ["public.links.twitter"] },
-    { "id": "greeting", "keywords": ["こんにちは", "こんにちわ", "はじめまして", "よろしく", "おつかれ"], "echo": true, "template": "よろしく。なんでもきいてみてください。", "keys": [] },
-    { "id": "help", "keywords": ["何が聞ける", "できること", "ヘルプ", "使い方"], "template": "なんでもきいてみてください。何がやりたいのですか、開発したゲームは何ですか、みたいな質問でどうぞ。", "keys": [] },
-    { "id": "recent", "keywords": ["最近", "何してる", "いま何", "直近", "ここ1年"], "template": "最近は {{timeline.recentYear.summary}} 詳しくは X のタイムラインやサイトを見てください。", "keys": ["timeline.recentYear.summary"] },
-    { "id": "year2025", "keywords": ["2025年", "2025年度"], "template": "2025年は {{timeline.byYear.2025.summary}} 詳しくはサイトを見てください。", "keys": ["timeline.byYear.2025.summary"] },
-    { "id": "year2024", "keywords": ["2024年", "2024年度", "去年"], "template": "2024年は {{timeline.byYear.2024.summary}} 詳しくはサイトを見てください。", "keys": ["timeline.byYear.2024.summary"] },
-    { "id": "year2023", "keywords": ["2023年", "2023年度", "一昨年"], "template": "2023年は {{timeline.byYear.2023.summary}} 詳しくはサイトを見てください。", "keys": ["timeline.byYear.2023.summary"] },
-    { "id": "year2022", "keywords": ["2022年", "2022年度"], "template": "2022年は {{timeline.byYear.2022.summary}} 詳しくはサイトを見てください。", "keys": ["timeline.byYear.2022.summary"] },
-    { "id": "year2020", "keywords": ["2020年", "2020年度"], "template": "2020年は {{timeline.byYear.2020.summary}} 詳しくはサイトを見てください。", "keys": ["timeline.byYear.2020.summary"] },
-    { "id": "year2019", "keywords": ["2019年", "2019年度"], "template": "2019年は {{timeline.byYear.2019.summary}} 詳しくはサイトを見てください。", "keys": ["timeline.byYear.2019.summary"] },
-    { "id": "year2018", "keywords": ["2018年", "2018年度"], "template": "2018年は {{timeline.byYear.2018.summary}} 詳しくはサイトを見てください。", "keys": ["timeline.byYear.2018.summary"] },
-    { "id": "games", "keywords": ["ゲーム", "開発したゲーム", "作ったゲーム", "ゲーム一覧"], "template": "{{site-content.games.description}}。{{site-content.games.examples}} 詳しくは {{site-content.gameUrl}} を見てください。", "keys": ["site-content.games.description", "site-content.games.examples", "site-content.gameUrl"] },
-    { "id": "works", "keywords": ["作品", "works", "ライブワーク", "Dance", "Music", "Visualize"], "template": "{{site-content.works.description}}。詳しくは {{site-content.worksUrl}} を見てください。", "keys": ["site-content.works.description", "site-content.worksUrl"] },
-    { "id": "event", "keywords": ["イベント", "開催", "サウンドミニハッカソン", "サウンドゲームジャム", "サウンド助け合い所"], "template": "{{site-content.event.description}} サウンドミニハッカソンは {{public.links.soundMiniHackathon}}、サウンドゲームジャムは {{public.links.soundGameJam}}、サウンド助け合い所は {{public.links.soundTasukeai}}。一覧は {{site-content.eventUrl}} も見てください。", "keys": ["site-content.event.description", "site-content.eventUrl", "public.links.soundMiniHackathon", "public.links.soundGameJam", "public.links.soundTasukeai"] },
-    { "id": "program", "keywords": ["プログラム", "コード", "github", "itch.io", "unityroom", "どこで公開"], "template": "{{site-content.program.description}} 詳しくは {{site-content.programUrl}} を見てください。", "keys": ["site-content.program.description", "site-content.programUrl"] },
-    { "id": "cedec", "keywords": ["CEDEC", "SIG-AUDIO", "勉強会"], "template": "CEDEC・SIG-AUDIO・勉強会にも出ていますかも。サイトの該当ページを見てください。{{site-content.homepage}}", "keys": ["site-content.homepage"] },
-    { "id": "live", "keywords": ["ライブ", "LIVE"], "template": "ライブ関連はサイトの LIVE や works を見てください。{{site-content.worksUrl}}", "keys": ["site-content.worksUrl"] },
-    { "id": "sound", "keywords": ["サウンド", "CD", "DVD", "AppleMusic", "Spotify"], "template": "サウンド（CD・DVD・AppleMusic・Spotify）はサイトの該当ページを見てください。{{site-content.homepage}}", "keys": ["site-content.homepage"] }
+    {
+      "id": "who",
+      "keywords": [
+        "誰",
+        "名前",
+        "たかし",
+        "田中",
+        "自己紹介",
+        "どなた"
+      ],
+      "template": "{{basic.displayName}}。{{basic.oneLinerJa}}",
+      "keys": [
+        "basic.displayName",
+        "basic.oneLinerJa"
+      ]
+    },
+    {
+      "id": "reward",
+      "keywords": [
+        "報酬",
+        "やりがい",
+        "主報酬",
+        "うれしい",
+        "何が楽しい",
+        "何が好き"
+      ],
+      "template": "主報酬は「{{profile.reward}}」ですね。",
+      "keys": [
+        "profile.reward"
+      ]
+    },
+    {
+      "id": "type",
+      "keywords": [
+        "タイプ",
+        "思考",
+        "エンジニア",
+        "R&D",
+        "何系",
+        "どんな人"
+      ],
+      "template": "{{profile.type}}ってとこ。世界を sandbox として扱うって感じです。",
+      "keys": [
+        "profile.type"
+      ]
+    },
+    {
+      "id": "motive",
+      "keywords": [
+        "動機",
+        "なぜ",
+        "やりたい",
+        "何がやりたい",
+        "きっかけ"
+      ],
+      "template": "世界に存在しない構造を作りたい・・・かなぁ。",
+      "keys": [
+        "profile.motive"
+      ]
+    },
+    {
+      "id": "stop",
+      "keywords": [
+        "止める",
+        "停止",
+        "やめる",
+        "難し",
+        "限界",
+        "諦める"
+      ],
+      "template": "技術的に難しすぎて、今のリソースでは突破できないときかも。",
+      "keys": [
+        "profile.stopReason"
+      ]
+    },
+    {
+      "id": "future",
+      "keywords": [
+        "10年",
+        "将来",
+        "未来",
+        "夢",
+        "どうしていたい"
+      ],
+      "template": "{{profile.future10y}}。",
+      "keys": [
+        "profile.future10y"
+      ]
+    },
+    {
+      "id": "selfImage",
+      "keywords": [
+        "自己認知",
+        "研究者",
+        "思想家",
+        "自分をどう思う"
+      ],
+      "template": "{{profile.selfImage}}。実装で現実を変える方かも。",
+      "keys": [
+        "profile.selfImage"
+      ]
+    },
+    {
+      "id": "income",
+      "keywords": [
+        "収益",
+        "収入",
+        "給与",
+        "お金",
+        "稼ぎ"
+      ],
+      "template": "主に労働型（給与）ですね。実験の電源って考えてるかも。",
+      "keys": [
+        "profile.income"
+      ]
+    },
+    {
+      "id": "link",
+      "keywords": [
+        "サイト",
+        "ホームページ",
+        "リンク",
+        "park18",
+        "URL",
+        "どこで見れる",
+        "Qiita",
+        "note",
+        "YouTube",
+        "記事",
+        "バズ",
+        "動画",
+        "tumblr",
+        "instagram",
+        "Facebook",
+        "facebook"
+      ],
+      "template": "サイトは {{public.links.homepage}}。X は {{public.links.twitter}}。Qiita は {{public.links.qiita}}。note は {{public.links.note}}。YouTube は {{public.links.youtube}}。tumblr は {{public.links.tumblr}}。instagram は {{public.links.instagram}}。Facebook は {{public.links.facebook}}。バズっているツイートは X のタイムラインで見てください。",
+      "keys": [
+        "public.links.homepage",
+        "public.links.twitter",
+        "public.links.qiita",
+        "public.links.note",
+        "public.links.youtube",
+        "public.links.tumblr",
+        "public.links.instagram",
+        "public.links.facebook"
+      ]
+    },
+    {
+      "id": "sns",
+      "keywords": [
+        "Twitter",
+        "X",
+        "SNS",
+        "tatmos",
+        "アカウント"
+      ],
+      "template": "X は {{public.links.twitter}} ですね。",
+      "keys": [
+        "public.links.twitter"
+      ]
+    },
+    {
+      "id": "greeting",
+      "keywords": [
+        "こんにちは",
+        "こんにちわ",
+        "はじめまして",
+        "よろしく",
+        "おつかれ"
+      ],
+      "echo": true,
+      "template": "よろしく。なんでもきいてみてください。",
+      "keys": []
+    },
+    {
+      "id": "help",
+      "keywords": [
+        "何が聞ける",
+        "できること",
+        "ヘルプ",
+        "使い方"
+      ],
+      "template": "なんでもきいてみてください。何がやりたいのですか、開発したゲームは何ですか、みたいな質問でどうぞ。",
+      "keys": []
+    },
+    {
+      "id": "recent",
+      "keywords": [
+        "最近",
+        "何してる",
+        "いま何",
+        "直近",
+        "ここ1年"
+      ],
+      "template": "最近は {{timeline.recentYear.summary}} 詳しくは X のタイムラインやサイトを見てください。",
+      "keys": [
+        "timeline.recentYear.summary"
+      ]
+    },
+    {
+      "id": "year2025",
+      "keywords": [
+        "2025年",
+        "2025年度"
+      ],
+      "template": "2025年は {{timeline.byYear.2025.summary}} 詳しくはサイトを見てください。",
+      "keys": [
+        "timeline.byYear.2025.summary"
+      ]
+    },
+    {
+      "id": "year2024",
+      "keywords": [
+        "2024年",
+        "2024年度",
+        "去年"
+      ],
+      "template": "2024年は {{timeline.byYear.2024.summary}} 詳しくはサイトを見てください。",
+      "keys": [
+        "timeline.byYear.2024.summary"
+      ]
+    },
+    {
+      "id": "year2023",
+      "keywords": [
+        "2023年",
+        "2023年度",
+        "一昨年"
+      ],
+      "template": "2023年は {{timeline.byYear.2023.summary}} 詳しくはサイトを見てください。",
+      "keys": [
+        "timeline.byYear.2023.summary"
+      ]
+    },
+    {
+      "id": "year2022",
+      "keywords": [
+        "2022年",
+        "2022年度"
+      ],
+      "template": "2022年は {{timeline.byYear.2022.summary}} 詳しくはサイトを見てください。",
+      "keys": [
+        "timeline.byYear.2022.summary"
+      ]
+    },
+    {
+      "id": "year2020",
+      "keywords": [
+        "2020年",
+        "2020年度"
+      ],
+      "template": "2020年は {{timeline.byYear.2020.summary}} 詳しくはサイトを見てください。",
+      "keys": [
+        "timeline.byYear.2020.summary"
+      ]
+    },
+    {
+      "id": "year2019",
+      "keywords": [
+        "2019年",
+        "2019年度"
+      ],
+      "template": "2019年は {{timeline.byYear.2019.summary}} 詳しくはサイトを見てください。",
+      "keys": [
+        "timeline.byYear.2019.summary"
+      ]
+    },
+    {
+      "id": "year2018",
+      "keywords": [
+        "2018年",
+        "2018年度"
+      ],
+      "template": "2018年は {{timeline.byYear.2018.summary}} 詳しくはサイトを見てください。",
+      "keys": [
+        "timeline.byYear.2018.summary"
+      ]
+    },
+    {
+      "id": "community",
+      "keywords": [
+        "Resoniteラジオ体操部",
+        "questラジオ体操部",
+        "NeosVRラジオ体操部",
+        "テセウスの運動朝活",
+        "むりCafe",
+        "バーチャル沖縄",
+        "バーチャルOKINAWA",
+        "vrc腰痛予防部",
+        "questマッチョ部",
+        "自主練マッチョ部",
+        "LPKと踊ろう会",
+        "NeosVR",
+        "VRChat",
+        "MMD伊香保温泉オフ",
+        "iレンコン"
+      ],
+      "template": "VRの朝活やコミュニティにも参加しています。Resoniteラジオ体操部、questラジオ体操部、テセウスの運動朝活、むりCafe、バーチャル沖縄など。詳しくは X のタイムライン（{{public.links.twitter}}）やサイトを見てください。",
+      "keys": [
+        "public.links.twitter"
+      ]
+    },
+    {
+      "id": "gamejam",
+      "keywords": [
+        "ggjmd",
+        "unity1week",
+        "soundminihack",
+        "soundgamejam",
+        "ggjshibuya",
+        "2時間ゲームジャム",
+        "2HGJ",
+        "ggjjp",
+        "effectorhack",
+        "fgj17",
+        "ggj17jp",
+        "tbh2017",
+        "mmlhack",
+        "ggj16dwango",
+        "fgj16",
+        "TokyoDemoFest",
+        "ggjkrzw",
+        "musichackday",
+        "ma11",
+        "ggjsap",
+        "fgj14",
+        "ノベルゲームジャム",
+        "ucgj",
+        "fgjmaf",
+        "fgj12",
+        "wegquest",
+        "GGJNII",
+        "RidgeRacerNight",
+        "30min",
+        "fgj11",
+        "sgj2011",
+        "mfu2011",
+        "unity3d",
+        "カタログIP",
+        "VR楽器",
+        "sigmus",
+        "IMLab",
+      ],
+      "template": "ゲームジャム・ハッカソンにも参加しています。Global Game Jam、unity1week、サウンドミニハッカソン、サウンドゲームジャムなど。サウンドミニハッカソンは {{public.links.soundMiniHackathon}}、サウンドゲームジャムは {{public.links.soundGameJam}}。一覧は {{site-content.eventUrl}} も見てください。",
+      "keys": [
+        "site-content.eventUrl",
+        "public.links.soundMiniHackathon",
+        "public.links.soundGameJam"
+      ]
+    },
+    {
+      "id": "games",
+      "keywords": [
+        "ゲーム",
+        "開発したゲーム",
+        "作ったゲーム",
+        "ゲーム一覧",
+        "ブレイゼン",
+        "MyDearestJAM",
+        "VR",
+        "Resonite",
+        "ディスクロニア",
+        "ディスクロ",
+        "アルトデウスBC",
+        "ADX2",
+        "東方Project",
+        "東京クロノス",
+      ],
+      "template": "{{site-content.games.description}}。{{site-content.games.examples}} 詳しくは {{site-content.gameUrl}} を見てください。",
+      "keys": [
+        "site-content.games.description",
+        "site-content.games.examples",
+        "site-content.gameUrl"
+      ]
+    },
+    {
+      "id": "works",
+      "keywords": [
+        "作品",
+        "works",
+        "ライブワーク",
+        "Dance",
+        "Music",
+        "Visualize",
+        "テクノ法要",
+        "ニコニコ動画",
+        "pixiv",
+        "TiltBrush",
+        "STYLY",
+        "pixiv今日のお題",
+        "落書きの音楽",
+        "SoundCloud",
+        "nicovideo",
+        "自動生成",
+        "自動作曲",
+        "深夜の真剣お絵描き60分一本勝負",
+      ],
+      "template": "{{site-content.works.description}}。詳しくは {{site-content.worksUrl}} を見てください。",
+      "keys": [
+        "site-content.works.description",
+        "site-content.worksUrl"
+      ]
+    },
+    {
+      "id": "event",
+      "keywords": [
+        "イベント",
+        "開催",
+        "サウンドミニハッカソン",
+        "サウンドゲームジャム",
+        "サウンド助け合い所"
+      ],
+      "template": "{{site-content.event.description}} サウンドミニハッカソンは {{public.links.soundMiniHackathon}}、サウンドゲームジャムは {{public.links.soundGameJam}}、サウンド助け合い所は {{public.links.soundTasukeai}}。一覧は {{site-content.eventUrl}} も見てください。",
+      "keys": [
+        "site-content.event.description",
+        "site-content.eventUrl",
+        "public.links.soundMiniHackathon",
+        "public.links.soundGameJam",
+        "public.links.soundTasukeai"
+      ]
+    },
+    {
+      "id": "program",
+      "keywords": [
+        "プログラム",
+        "コード",
+        "github",
+        "itch.io",
+        "unityroom",
+        "どこで公開"
+      ],
+      "template": "{{site-content.program.description}} 詳しくは {{site-content.programUrl}} を見てください。",
+      "keys": [
+        "site-content.program.description",
+        "site-content.programUrl"
+      ]
+    },
+    {
+      "id": "cedec",
+      "keywords": [
+        "CEDEC",
+        "SIG-AUDIO",
+        "勉強会"
+      ],
+      "template": "CEDEC・SIG-AUDIO・勉強会にも出ていますかも。サイトの該当ページを見てください。{{site-content.homepage}}",
+      "keys": [
+        "site-content.homepage"
+      ]
+    },
+    {
+      "id": "live",
+      "keywords": [
+        "ライブ",
+        "LIVE"
+      ],
+      "template": "ライブ関連はサイトの LIVE や works を見てください。{{site-content.worksUrl}}",
+      "keys": [
+        "site-content.worksUrl"
+      ]
+    },
+    {
+      "id": "sound",
+      "keywords": [
+        "サウンド",
+        "CD",
+        "DVD",
+        "AppleMusic",
+        "Spotify"
+      ],
+      "template": "サウンド（CD・DVD・AppleMusic・Spotify）はサイトの該当ページを見てください。{{site-content.homepage}}",
+      "keys": [
+        "site-content.homepage"
+      ]
+    }
   ],
   "fallback": "その質問にはまだ答えられないかも。別の聞き方か、別の話題で聞いてください。"
 }

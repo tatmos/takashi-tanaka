@@ -235,6 +235,26 @@ function buildFaqOutput(tweets, config, existingKeywords) {
   };
 }
 
+/** 年別のキーワード候補を生成（apply-candidates.js --year で利用） */
+function buildByYearKeywords(tweets, years, config, existingKeywords) {
+  const byYear = {};
+  for (const year of years) {
+    const y = parseInt(year, 10);
+    if (isNaN(y)) continue;
+    const filtered = tweets.filter((entry) => {
+      const t = entry && entry.tweet;
+      if (!t) return false;
+      const d = parseTweetDate(t.created_at);
+      return d && d.getUTCFullYear() === y;
+    });
+    if (filtered.length === 0) continue;
+    const out = buildFaqOutput(filtered, config, existingKeywords);
+    const suggested = (out.faqKeywordCandidates && out.faqKeywordCandidates.suggestedKeywordsForRules) || [];
+    byYear[String(year)] = { suggestedKeywords: suggested, tweetCount: filtered.length };
+  }
+  return byYear;
+}
+
 function main() {
   const config = loadConfig();
   const tweetsPath = getTweetsPath(process.argv, config);
@@ -260,6 +280,11 @@ function main() {
 
   const timelineOut = buildTimelineOutput(tweets, recentStart, recentEnd, config);
   const faqOut = buildFaqOutput(tweets, config, existingKeywords);
+
+  const years = Object.keys(timelineOut.byYearCount || {}).sort((a, b) => Number(b) - Number(a));
+  const byYear = buildByYearKeywords(tweets, years, config, existingKeywords);
+  faqOut.byYear = byYear;
+  faqOut.byYear_note = "apply-candidates.js --year=YYYY でその年の suggestedKeywords を rules/faq に追加するときに参照します。";
 
   if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 

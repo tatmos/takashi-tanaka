@@ -2,25 +2,297 @@
   "note": "よくある質問。items はランダムにシャッフルされ、先頭から showCount 件をボタン表示。a が null ならルールエンジンで返答。a を書くとその文を表示（{{profile.reward}} で定義を埋め込み可能）。増やし方: 同じ答えでよい質問は言い換えで追加。長い答えは a に直接書く。",
   "showCount": 5,
   "items": [
-    { "q": "誰？", "a": null },
-    { "q": "主報酬は？", "a": null },
-    { "q": "やりがいは？", "a": null },
-    { "q": "どんなタイプ？", "a": null },
-    { "q": "なぜやってる？", "a": null },
-    { "q": "何がやりたい？", "a": null },
-    { "q": "プロジェクトはいつやめる？", "a": null },
-    { "q": "10年後どうしていたい？", "a": null },
-    { "q": "自分をどう思う？", "a": null },
-    { "q": "収入はどうしてる？", "a": null },
-    { "q": "サイトやリンクは？", "a": null },
-    { "q": "X（Twitter）は？", "a": null },
-    { "q": "何が聞ける？", "a": null },
-    { "q": "ゲーム何やってる？", "a": null },
-    { "q": "開発したゲームは？", "a": null },
-    { "q": "作品は？", "a": null },
-    { "q": "イベントやってる？", "a": null },
-    { "q": "プログラムはどこで見れる？", "a": null },
-    { "q": "こんにちは", "a": null },
-    { "q": "よろしく", "a": null }
+    {
+      "q": "誰？",
+      "a": null
+    },
+    {
+      "q": "主報酬は？",
+      "a": null
+    },
+    {
+      "q": "やりがいは？",
+      "a": null
+    },
+    {
+      "q": "どんなタイプ？",
+      "a": null
+    },
+    {
+      "q": "なぜやってる？",
+      "a": null
+    },
+    {
+      "q": "何がやりたい？",
+      "a": null
+    },
+    {
+      "q": "プロジェクトはいつやめる？",
+      "a": null
+    },
+    {
+      "q": "10年後どうしていたい？",
+      "a": null
+    },
+    {
+      "q": "自分をどう思う？",
+      "a": null
+    },
+    {
+      "q": "収入はどうしてる？",
+      "a": null
+    },
+    {
+      "q": "サイトやリンクは？",
+      "a": null
+    },
+    {
+      "q": "X（Twitter）は？",
+      "a": null
+    },
+    {
+      "q": "何が聞ける？",
+      "a": null
+    },
+    {
+      "q": "ゲーム何やってる？",
+      "a": null
+    },
+    {
+      "q": "開発したゲームは？",
+      "a": null
+    },
+    {
+      "q": "作品は？",
+      "a": null
+    },
+    {
+      "q": "イベントやってる？",
+      "a": null
+    },
+    {
+      "q": "プログラムはどこで見れる？",
+      "a": null
+    },
+    {
+      "q": "こんにちは",
+      "a": null
+    },
+    {
+      "q": "よろしく",
+      "a": null
+    },
+    {
+      "q": "Resoniteラジオ体操部",
+      "a": null
+    },
+    {
+      "q": "ggjmd",
+      "a": null
+    },
+    {
+      "q": "questラジオ体操部",
+      "a": null
+    },
+    {
+      "q": "バーチャル沖縄",
+      "a": null
+    },
+    {
+      "q": "むりCafe",
+      "a": null
+    },
+    {
+      "q": "テセウスの運動朝活",
+      "a": null
+    },
+    {
+      "q": "ブレイゼン",
+      "a": null
+    },
+    {
+      "q": "MyDearestJAM",
+      "a": null
+    },
+    {
+      "q": "soundminihack",
+      "a": null
+    },
+    {
+      "q": "NeosVRラジオ体操部",
+      "a": null
+    },
+    {
+      "q": "ディスクロニア",
+      "a": null
+    },
+    {
+      "q": "NeosVR",
+      "a": null
+    },
+    {
+      "q": "ディスクロ",
+      "a": null
+    },
+    {
+      "q": "questマッチョ部",
+      "a": null
+    },
+    {
+      "q": "バーチャルOKINAWA",
+      "a": null
+    },
+    {
+      "q": "アルトデウスBC",
+      "a": null
+    },
+    {
+      "q": "ADX2",
+      "a": null
+    },
+    {
+      "q": "自動生成",
+      "a": null
+    },
+    {
+      "q": "深夜の真剣お絵描き60分一本勝負",
+      "a": null
+    },
+    {
+      "q": "東方Project",
+      "a": null
+    },
+    {
+      "q": "落書きの音楽",
+      "a": null
+    },
+    {
+      "q": "TiltBrush",
+      "a": null
+    },
+    {
+      "q": "STYLY",
+      "a": null
+    },
+    {
+      "q": "ggjshibuya",
+      "a": null
+    },
+    {
+      "q": "pixiv今日のお題",
+      "a": null
+    },
+    {
+      "q": "メイドインアビス",
+      "a": null
+    },
+    {
+      "q": "ggjjp",
+      "a": null
+    },
+    {
+      "q": "effectorhack",
+      "a": null
+    },
+    {
+      "q": "unity1week",
+      "a": null
+    },
+    {
+      "q": "fgj17",
+      "a": null
+    },
+    {
+      "q": "soundgamejam",
+      "a": null
+    },
+    {
+      "q": "mmlhack",
+      "a": null
+    },
+    {
+      "q": "2時間ゲームジャム",
+      "a": null
+    },
+    {
+      "q": "カタログIP",
+      "a": null
+    },
+    {
+      "q": "ggjkrzw",
+      "a": null
+    },
+    {
+      "q": "musichackday",
+      "a": null
+    },
+    {
+      "q": "MMD伊香保温泉オフ",
+      "a": null
+    },
+    {
+      "q": "ggjsap",
+      "a": null
+    },
+    {
+      "q": "fgj14",
+      "a": null
+    },
+    {
+      "q": "IMLab",
+      "a": null
+    },
+    {
+      "q": "unitejapan",
+      "a": null
+    },
+    {
+      "q": "sm20426416",
+      "a": null
+    },
+    {
+      "q": "SoundCloud",
+      "a": null
+    },
+    {
+      "q": "fgj12",
+      "a": null
+    },
+    {
+      "q": "nicovideo",
+      "a": null
+    },
+    {
+      "q": "30min",
+      "a": null
+    },
+    {
+      "q": "fgj11",
+      "a": null
+    },
+    {
+      "q": "iレンコン",
+      "a": null
+    },
+    {
+      "q": "Detune_Info",
+      "a": null
+    },
+    {
+      "q": "GODP",
+      "a": null
+    },
+    {
+      "q": "mbmuga",
+      "a": null
+    },
+    {
+      "q": "tonaritter",
+      "a": null
+    },
+    {
+      "q": "tatmos2",
+      "a": null
+    }
   ]
 }
