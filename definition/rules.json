@@ -135,15 +135,19 @@
         "tumblr",
         "instagram",
         "Facebook",
-        "facebook"
+        "facebook",
+        "pixiv"
       ],
-      "template": "サイトは {{public.links.homepage}}。X は {{public.links.twitter}}。Qiita は {{public.links.qiita}}。note は {{public.links.note}}。YouTube は {{public.links.youtube}}。tumblr は {{public.links.tumblr}}。instagram は {{public.links.instagram}}。Facebook は {{public.links.facebook}}。バズっているツイートは X のタイムラインで見てください。",
+      "template": "サイトは {{public.links.homepage}}。X は {{public.links.twitter}}。Qiita は {{public.links.qiita}}。note は {{public.links.note}}。YouTube は {{public.links.youtube}}。pixiv は {{public.links.pixiv}}。SoundCloud は {{public.links.soundcloud}}。ニコニコ動画は {{public.links.nicovideo}}。tumblr は {{public.links.tumblr}}。instagram は {{public.links.instagram}}。Facebook は {{public.links.facebook}}。バズっているツイートは X のタイムラインで見てください。",
       "keys": [
         "public.links.homepage",
         "public.links.twitter",
         "public.links.qiita",
         "public.links.note",
         "public.links.youtube",
+        "public.links.pixiv",
+        "public.links.soundcloud",
+        "public.links.nicovideo",
         "public.links.tumblr",
         "public.links.instagram",
         "public.links.facebook"
@@ -367,7 +371,6 @@
         "ディスクロ",
         "アルトデウスBC",
         "ADX2",
-        "東方Project",
         "東京クロノス"
       ],
       "template": "{{site-content.games.description}}。{{site-content.games.examples}} 詳しくは {{site-content.gameUrl}} を見てください。",
@@ -375,6 +378,31 @@
         "site-content.games.description",
         "site-content.games.examples",
         "site-content.gameUrl"
+      ]
+    },
+    {
+      "id": "rakugaki",
+      "keywords": [
+        "落書きの音楽"
+      ],
+      "template": "落書きの音楽は SoundCloud（{{public.links.soundcloud}}）やニコニコ動画（{{public.links.nicovideo}}）などで聴けます。",
+      "keys": [
+        "public.links.soundcloud",
+        "public.links.nicovideo"
+      ]
+    },
+    {
+      "id": "pixiv",
+      "keywords": [
+        "東方Project",
+        "お絵描き",
+        "pixiv",
+        "pixiv今日のお題",
+        "深夜の真剣お絵描き60分一本勝負"
+      ],
+      "template": "東方Projectやお絵描きは pixiv で活動しています。{{public.links.pixiv}} で見てください。",
+      "keys": [
+        "public.links.pixiv"
       ]
     },
     {
@@ -388,16 +416,12 @@
         "Visualize",
         "テクノ法要",
         "ニコニコ動画",
-        "pixiv",
         "TiltBrush",
         "STYLY",
-        "pixiv今日のお題",
-        "落書きの音楽",
         "SoundCloud",
         "nicovideo",
         "自動生成",
-        "自動作曲",
-        "深夜の真剣お絵描き60分一本勝負"
+        "自動作曲"
       ],
       "template": "{{site-content.works.description}}。詳しくは {{site-content.worksUrl}} を見てください。",
       "keys": [
