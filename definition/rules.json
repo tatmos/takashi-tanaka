@@ -343,7 +343,7 @@
         "カタログIP",
         "VR楽器",
         "sigmus",
-        "IMLab",
+        "IMLab"
       ],
       "template": "ゲームジャム・ハッカソンにも参加しています。Global Game Jam、unity1week、サウンドミニハッカソン、サウンドゲームジャムなど。サウンドミニハッカソンは {{public.links.soundMiniHackathon}}、サウンドゲームジャムは {{public.links.soundGameJam}}。一覧は {{site-content.eventUrl}} も見てください。",
       "keys": [
@@ -368,7 +368,7 @@
         "アルトデウスBC",
         "ADX2",
         "東方Project",
-        "東京クロノス",
+        "東京クロノス"
       ],
       "template": "{{site-content.games.description}}。{{site-content.games.examples}} 詳しくは {{site-content.gameUrl}} を見てください。",
       "keys": [
@@ -397,7 +397,7 @@
         "nicovideo",
         "自動生成",
         "自動作曲",
-        "深夜の真剣お絵描き60分一本勝負",
+        "深夜の真剣お絵描き60分一本勝負"
       ],
       "template": "{{site-content.works.description}}。詳しくは {{site-content.worksUrl}} を見てください。",
       "keys": [

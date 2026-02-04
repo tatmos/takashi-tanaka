@@ -26,7 +26,7 @@
 - 実験は `experiments/` 以下。命名は `experiments/YYYYMM-短い名前`。
 - 定義の更新は `definition/*.json` を直接編集。
 - 詳細な仕様・画面構成・今後の拡張案は [企画書.md](企画書.md) に記載。
-- **ローカルで確認するとき**: `index.html` を file:// で開くと定義の fetch が失敗することがあります。`npx serve .` や GitHub Pages など、HTTP で配信して開いてください。足りていないところ・改善案は [足りていないところ・改善案.md](足りていないところ・改善案.md) を参照。
+- **ローカルで確認するとき**: `index.html` を file:// で開くと定義の fetch が失敗します。**必ず** `index.html` と `definition/` があるディレクトリで `npx serve .` または `python -m http.server 8000` を実行し、表示された URL（例: http://localhost:8000/）で開いてください。別のフォルダから起動すると `definition/rules.json` などが 404 になりルールが読み込めません。足りていないところ・改善案は [足りていないところ・改善案.md](足りていないところ・改善案.md) を参照。
 
 ## リンク
 

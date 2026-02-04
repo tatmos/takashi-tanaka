@@ -17,14 +17,27 @@
     "behavior",
     "timeline",
   ];
-  const DEFINITION_BASE = "definition/";
+  function getDefinitionBase() {
+    if (typeof document === "undefined" || !document.location) return "definition/";
+    var href = document.location.href;
+    var path = document.location.pathname || "/";
+    var base = path.replace(/\/[^/]*$/, "") || "/";
+    return base + (base.endsWith("/") ? "" : "/") + "definition/";
+  }
 
   function loadOne(name) {
-    return fetch(DEFINITION_BASE + name + ".json")
+    var url = getDefinitionBase() + name + ".json";
+    return fetch(url)
       .then(function (r) {
+        if (!r.ok && typeof console !== "undefined" && console.warn) {
+          console.warn("definition: " + name + ".json の取得に失敗しました (" + r.status + "): " + url);
+        }
         return r.ok ? r.json() : null;
       })
-      .catch(function () {
+      .catch(function (err) {
+        if (typeof console !== "undefined" && console.warn) {
+          console.warn("definition: " + name + ".json の取得に失敗しました: " + url, err);
+        }
         return null;
       });
   }
