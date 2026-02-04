@@ -1,0 +1,10 @@
+{
+  "note": "tweets.js のパスはコマンドライン引数で上書き可能。recentYearDays は「今」から何日分を recentYear とするか。",
+  "tweetsJsPath": "",
+  "recentYearDays": 365,
+  "timelineSnippetLength": 50,
+  "timelineCandidatesPerMonth": 5,
+  "faqTopHashtags": 50,
+  "faqTopTerms": 80,
+  "faqMinTermLength": 2
+}
